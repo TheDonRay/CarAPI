@@ -11,10 +11,16 @@ const handleUserPref = async (req, res) => {
             }); 
         } 
         // just for some testing purposes: 
-        console.log(UserCarPreference);  
-        
+        console.log(UserCarPreference);   
+        res.status(200).json({ 
+            UserCarPreference: true
+        }); 
     } catch (error) {   
-        
+        console.error('Error with sending data to this route', error); 
+        res.status(500).json({ 
+            Error: error.message
+        }); 
     }
-    
-}
+} 
+
+module.exports = handleUserPref; 
