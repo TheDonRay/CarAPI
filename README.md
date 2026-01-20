@@ -35,10 +35,4 @@ Before you begin, ensure you have the following installed:
 - Vehicle pricing data providers
 - Community contributors
 
-## 📧 Contact
-
-For questions or support, please reach out to: your.email@example.com
-
----
-
 ⭐ Star this repo if you find it helpful!
