@@ -14,12 +14,14 @@ const handleUserPref = async (req, res) => {
                 Error: 'No response from user to fill out relevant key values'
             }); 
         } 
-        // just for some testing purposes:  
-        // we can implement something like the ranges etc. 
         console.log(UserCarPreference);   
         res.status(200).json({ 
-            UserCarPreference: true
-        }); 
+            UserCarPreference: "recieved successfully"
+        });   
+        
+        // call the function here to actually pass the organized data -> goes into the API route. 
+        
+
     } catch (error) {   
         console.error('Error with sending data to this route', error); 
         res.status(500).json({ 

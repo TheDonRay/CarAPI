@@ -23,7 +23,8 @@
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "mongoose": "^9.1.4",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.5",
     "openai": "^6.16.0"
   },
   "devDependencies": {
