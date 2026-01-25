@@ -20,7 +20,8 @@ const handleUserPref = async (req, res) => {
 
         res.status(200).json({ 
             UserCarPreference: "recieved successfully", 
-            message: 'recieved successfully'
+            message: 'recieved successfully', 
+            Data: OrganizedData
         });   
 
     } catch (error) {   
