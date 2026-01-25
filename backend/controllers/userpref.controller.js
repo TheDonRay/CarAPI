@@ -25,7 +25,7 @@ const handleUserPref = async (req, res) => {
 
     console.log("Organized Data is now: ", OrganizedData);
 
-    const AiAdvisor = await client.chat.responses.create({
+    const AiAdvisor = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         {
@@ -35,7 +35,7 @@ const handleUserPref = async (req, res) => {
         }, 
         {
             role: "user", 
-            content: to_string(OrganizedData)
+            content: JSON.stringify(OrganizedData)
         }
       ],
     });
