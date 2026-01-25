@@ -1,6 +1,3 @@
-//TODO: need to import the database here as such to push in the carApi data -> need to create a schema.
-
-
 const OpenAi = require("openai");
 const client = new OpenAi({
   apiKey: process.env.CAR_AI,
