@@ -29,11 +29,11 @@ const handleUserPref = async (req, res) => {
           role: "system",
           content:
             "You are a car advisor AI. Evaluate whether a user should purchase a specific car based on their budget, the vehicle’s brand, and the selected model. Assess the brand’s overall reliability, value, and ownership reputation, then determine if the purchase is financially sensible given the user’s budget. Conclude with a clear recommendation on whether to buy the car or continue saving",
-        }, 
+        },
         {
-            role: "user", 
-            content: JSON.stringify(OrganizedData)
-        }
+          role: "user",
+          content: JSON.stringify(OrganizedData),
+        },
       ],
     });
 
