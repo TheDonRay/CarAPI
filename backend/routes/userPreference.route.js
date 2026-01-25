@@ -1,7 +1,7 @@
-const express = require('express'); 
-const userPref = express.Router(); 
-const userPrefController = require('../controllers/userpref.controller.js'); 
+const express = require("express");
+const userPref = express.Router();
+const userPrefController = require("../controllers/userpref.controller.js");
 
-userPref.post('/userpref', userPrefController); 
+userPref.post("/userpref", userPrefController);
 
-module.exports = userPref; 
+module.exports = userPref;
