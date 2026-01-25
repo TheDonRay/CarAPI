@@ -9,7 +9,7 @@ const organizeData = (userCarPref) => {
             return null; 
         }  
 
-        // first i need to convert the object to an array as such 
+        // first i need to convert the object to an array as such  // does the conversion here. 
         const conversionArray = Array.isArray(userCarPref) ?  userCarPref : [userCarPref]; 
         // use the map function to organize the data as such 
         const organizedData = conversionArray.map((items) => ({ 

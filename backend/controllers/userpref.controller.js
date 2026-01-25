@@ -1,5 +1,10 @@
-//TODO: need to import the database here as such to push in the carApi data -> need to create a schema.  
-//TODO: need to set up openAI api as well in a seperate route that gets the helperFunction data as well.  
+//TODO: need to import the database here as such to push in the carApi data -> need to create a schema.   
+
+//TODO: set up the openAi 
+const OpenAi = require('openai'); 
+const client = new OpenAi({ 
+    apiKey: process.env.CAR_AI
+}); 
 
 const helperFunction = require('../helpers/organizedata.helper.js'); 
 
@@ -16,7 +21,19 @@ const handleUserPref = async (req, res) => {
         console.log(UserCarPreference);    
 
         // call the function here to actually pass the organized data -> goes into the API route. 
-        const OrganizedData = helperFunction(UserCarPreference);  
+        const OrganizedData = helperFunction(UserCarPreference);   
+
+        console.log('Organized Data is now: ', OrganizedData);  
+
+        const AiAdvisor = await client.chat.responses.create({ 
+            model: 'gpt-4o-mini', 
+            messages: [
+                { 
+                    role: 'system', 
+                    content: 'You are a car advisor AI. Evaluate whether a user should purchase a specific car based on their budget, the vehicle’s brand, and the selected model. Assess the brand’s overall reliability, value, and ownership reputation, then determine if the purchase is financially sensible given the user’s budget. Conclude with a clear recommendation on whether to buy the car or continue saving' 
+                }
+        ]
+        })
 
         res.status(200).json({ 
             UserCarPreference: "recieved successfully", 
