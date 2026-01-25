@@ -344,4 +344,4 @@ For questions or support, please open an issue or contact:
 
 ---
 
-Made with ❤️ by the Vehicle Purchase Advisor Team
+Made with ❤️ by Ray
